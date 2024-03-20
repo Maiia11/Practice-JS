@@ -43,8 +43,7 @@
 // const btnDscr = document.querySelector("#decrease");
 // const btnIscr = document.querySelector("#increase");
 // const box = document.querySelector("#box");
-// ///console.dir(box)
-// // OfsetHight i OfsetHight
+// ///console.dir(box) - бачимо що у div є такі властивості як оfsetHight i оfsetHight, вони відповідають за поточні розміри елемента
 // btnDscr.addEventListener("click", onDscr)
 
 // function onDscr() {
@@ -62,3 +61,31 @@
 //     box.style.height = `${offsetHeight + 10}px`;
 //     box.style.width = `${offsetWidth + 10}px`;
 // }
+
+//При кліку на кнопку "Подвоїти" збільшувати значення в кожному елементі списку в два рази.
+
+// const listItemEl = document.querySelectorAll(".listItem")
+// const btnEl = document.querySelector("#double");
+// btnEl.addEventListener("click", handleClick);
+// //Метод forEach, цикл for of, властивість length працюють на псевдомасиві, тому мі можемо його застосувати. Якщо інші методи застосовуємо оператор [...spred], робимо із псевдомасива - масив.
+// function handleClick() {
+//     listItemEl.forEach(item => item.textContent = item.textContent * 2);
+    
+// }
+
+
+//Наведено список людей. Зроби можливість фільтрації (пошуку) за ім'ям або за прізвищем.
+
+// const inputEl = document.querySelector(".contactsFilter");
+// const ulEl = document.querySelector(".contacts");
+// const liEl = document.querySelectorAll(".contact");
+
+// inputEl.addEventListener("input", onInput);
+
+// function onInput(event) {
+//     const valueEl = event.target.value.toLowerCase().trim();
+//     const filteredEl = [...liEl].filter(item => item.textContent.toLowerCase().includes(valueEl));
+//     ulEl.innerHTML = "";
+//     ulEl.append(...filteredEl);
+
+//  }
