@@ -90,10 +90,17 @@
 
 //  }
 
-const settings = {
-  theme: "dark",
-  isAuthenticated: true,
-  options: [1, 2, 3],
-};
+//При кліку на кнопку філтер треба видалити з списку позначені елементи
 
-localStorage.setItem("settings", JSON.stringify(settings));
+const form = document.querySelector(".checkboxForm");
+const wrapper = document.querySelectorAll(".checkboxWrapper");
+
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const filteredArr = [...wrapper]
+    .filter(item => item.lastElementChild.checked)
+    .forEach(item => item.remove());
+}
+
