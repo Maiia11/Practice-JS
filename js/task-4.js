@@ -92,15 +92,15 @@
 
 //При кліку на кнопку філтер треба видалити з списку позначені елементи
 
-const form = document.querySelector(".checkboxForm");
-const wrapper = document.querySelectorAll(".checkboxWrapper");
+// const form = document.querySelector(".checkboxForm");
+// const wrapper = document.querySelectorAll(".checkboxWrapper");
 
-form.addEventListener("submit", handleSubmit);
+// form.addEventListener("submit", handleSubmit);
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const filteredArr = [...wrapper]
-    .filter(item => item.lastElementChild.checked)
-    .forEach(item => item.remove());
-}
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const filteredArr = [...wrapper]
+//     .filter(item => item.lastElementChild.checked)
+//     .forEach(item => item.remove());
+// }
 
