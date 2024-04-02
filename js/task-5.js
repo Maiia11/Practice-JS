@@ -54,26 +54,40 @@
 // * повідомляти про помилку.
 
 
-const userData = {
-    email: "user@gmail.com",
-    password: 111,
-}
+// const userData = {
+//     email: "user@gmail.com",
+//     password: 111,
+// }
 
 
-const form = document.querySelector("#login-form");
+// const form = document.querySelector("#login-form");
 
-form.addEventListener("submit", handleSubmit);
+// form.addEventListener("submit", handleSubmit);
 
-function handleSubmit(event) {
-    event.preventDefault();
-    if (form.elements.email.value !== userData.email || form.elements.password.value !== userData.password) {
-        alert("Ви ввелі неправильні дані");
-        return;
-    }
-    const data = {
-        email: form.elements.email.value;
-        password: form.elements.password.value;
-    }
+// function handleSubmit(event) {
+//     event.preventDefault();
+//     if (form.elements.email.value !== userData.email || form.elements.password.value !== userData.password) {
+//         alert("Ви ввелі неправильні дані");
+//         return;
+//     }
+//     const data = {
+//         email: form.elements.email.value;
+//         password: form.elements.password.value;
+//     }
 
+// }
 
-}
+fetch("<https://jsonplaceholder.typicode.com/users>")
+  .then(response => {
+      // Response handling
+      console.log(response);
+  })
+  .then(data => {
+      // Data handling
+      console.log(data);
+  })
+  .catch(error => {
+      // Error handling
+      console.log(error);
+  }); 
+  
