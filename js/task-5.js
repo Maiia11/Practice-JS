@@ -78,18 +78,14 @@
 // }
 
 
-const postIdToDelete = 1;
+console.log("Before try...catch");
 
-fetch(`https://jsonplaceholder.typicode.com/posts/${postIdToDelete}`, {
-  method: "DELETE",
-})
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  })
-  .then((deletedPost) => console.log(deletedPost))
-  .catch(error => console.log("Error:", error));
+try {
+  const result = 10 / 0;
+  console.log(result); // Цей рядок не виконається через помилку
+} catch (error) {
+  // Обробимо помилку
+  console.error(error.message);
+}
 
-
+console.log("After try...catch");
