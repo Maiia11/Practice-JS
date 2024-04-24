@@ -112,9 +112,63 @@
 //     return value;
 // }
         
-    
-    
 
 
 // console.log(calculateAvarage(7, 5, 8 ));
 
+
+
+
+// Напишіть функцію chekKeyInObject(), яка приймає 2 параметри obj і key
+// Функція буде перебирати об'єкт.
+// Якщо об'єкт має такий ключ - поверне true, в іншому разі - поверне false
+
+// const user = {
+//     name: "Igor",
+//     car: "Mercedes",
+//     carColor : "black"
+// }
+
+// 1) Варіант вирішення
+// function chekKeyInObject(obj, key) {
+//     for (const objKey in obj) {
+//         if (objKey === key) {
+//             return true;
+//         }
+//        return false
+//     }
+// }
+
+// console.log(chekKeyInObject(user, "name"));
+
+// 2)Варіант вирішення
+
+// function chekKeyInObject(obj, key) {
+//     return Object.keys(obj).includes(key);
+// }
+
+
+// console.log(chekKeyInObject(user, 'car'));
+
+// Є об'єкт, у якому зберігаються обрані товари у кошику.
+// Напишіть код для визначення загальної суми замовлення
+// і зберіжіть його результат у змінній totalCost.
+//     Якщо об'єкт cart порожній, то результат має бути 0.
+
+const cart = {
+    apple: 50,
+    banana: 30,
+    orange: 40,
+}
+
+let totalCost = 0;
+function wichSumCart(obj) {
+    const value = Object.values(obj);
+    for (const val of value) {
+        totalCost += val;
+    }
+    return totalCost;
+  
+}
+
+console.log(wichSumCart(cart));
